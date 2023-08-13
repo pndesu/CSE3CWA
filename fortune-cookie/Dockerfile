@@ -1,6 +1,7 @@
 FROM node:18.16.0-alpine
 RUN apk add --no-cache tini
 ENTRYPOINT ["/sbin/tini", "--"]
+RUN apk add --no-cache fortune
 # Create a working directory for our application.
 RUN mkdir -p /app
 WORKDIR /app
